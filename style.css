@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+p {
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header {
+    outline: 2px solid red;
+    position: relative;
+
+    display: flex;
+
+    padding: 100px;
+    background: linear-gradient(-30deg, white 50%, #3691B2 50%);
+}
+
+.header-content {
+
+    display: flex;
+    align-items: center;
+    
+    padding: 50px;
+    
+}
+
+.header-content > img {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.content {
+    box-shadow: 4px 4px 4px 1px rgb(189, 189, 189);
+
+    padding: 50px;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* outline: 2px solid green; */
+    background-color: white;
+
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.svg-icon {
+    width: 34px;
+}
+
+.btn > .svg-icon {
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.btn:hover .svg-icon {
+    transition: transform 150ms;
+    transform: translateY(-10px);
+}
+
+.btn {
+    /* outline: auto; */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.content > .header-icons {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+    .header-content > img {
+        float: left;
+        margin-top: -100px;
+        margin-right: 20px;
+        margin-left: -100px;
+
+    }
+
+    .header-content {
+        box-shadow: 4px 4px 4px 1px rgb(189, 189, 189);
+        display: inline;
+        background-color: white;
+    }
+
+    .content {
+        box-shadow: none;
+        display: block;
+
+        padding-top: 50px;
+    }
+
+    /* .content > .header-icons {
+        justify-self: flex-end;
+        margin-top: auto;   
+    } */
+
+    .content > .header-icons {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+
+        padding: 20px;
+
+        background: linear-gradient(-20deg, white 75%, #3691B2 50%);
+    }
+
+    .header-content > img {
+        margin: 0;
+        max-width: 200px;
+    }
+
+    .content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .content > .header-icons {
+        display: flex;
+        justify-self: center;
+        margin-top: 20px;
+
+        
+    }
+
+    .content > h1 {
+        text-align: center;
+    }
+}
