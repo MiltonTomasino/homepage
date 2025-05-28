@@ -43,10 +43,13 @@ header {
     max-width: 300px;
     height: auto;
     object-fit: cover;
+    position: relative;
+
+    box-shadow: 1px 1px 10px 1px gray;
 }
 
 .content {
-    box-shadow: 4px 4px 4px 1px rgb(189, 189, 189);
+    box-shadow: 4px 4px 10px 1px rgb(189, 189, 189);
 
     padding: 50px;
     min-height: 400px;
@@ -91,6 +94,52 @@ header {
     margin-top: auto;
 }
 
+/*PROJECTS*/
+
+section {
+    padding: 70px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* outline: 2px solid blue; */
+    gap: 50px;
+}
+
+.project-container > .project {
+    /* outline: 2px solid green; */
+    max-width: 300px;
+    box-shadow: 4px 4px 10px 1px rgb(189, 189, 189);
+}  
+
+.project > .screenshot {
+    width: 300px;
+    outline: 1px solid orange;
+    height: 200px;
+}
+
+.project > .info {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.info > .right-info {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    padding-top: 11px;
+}
+
+.project > p {
+    padding: 5px;
+    font-size: 16px;
+}
+
+
 @media (max-width: 1000px) {
     .header-content > img {
         float: left;
@@ -101,7 +150,7 @@ header {
     }
 
     .header-content {
-        box-shadow: 4px 4px 4px 1px rgb(189, 189, 189);
+        box-shadow: 4px 4px 10px 1px rgb(189, 189, 189);
         display: inline;
         background-color: white;
     }
@@ -160,4 +209,13 @@ header {
     .content > h1 {
         text-align: center;
     }
+
+    section {
+        padding: 0;
+    }
+    section > h1 {
+        padding: 10px;
+        text-align: center;
+    }
+    
 }
